@@ -2,10 +2,9 @@
     "name": "vui-icon",
     "version": "1.0.1",
     "description": "vue2 svg icon component",
-    "main": "lib/index.js",
+    "main": "src/index.js",
     "scripts": {
-        "build": "rollup -c",
-        "svg": "node build/svgpath.js",
+        "build": "node build/build.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -26,6 +25,7 @@
         "vue": "^2.1.10",
         "svgpath": "^2.2.1",
         "xml2js": "^0.4.17",
-        "svg-scaler-viewbox": "^0.1.6"
+        "svg-scaler-viewbox": "^0.1.6",
+        "ejs": "^2.5.5"
     }
 }
