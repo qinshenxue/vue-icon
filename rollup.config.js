@@ -2,9 +2,9 @@ var rollup = require('rollup');
 var babel = require('rollup-plugin-babel');
 
 export default {
-    entry: 'demo/demo.js',
+    entry: 'build/index.js',
     format: 'iife',
-    dest: 'dist/bundle.js',
+    dest: 'build/demo.js',
     plugins: [
         babel()
     ]

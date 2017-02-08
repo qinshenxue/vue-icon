@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <title>vui-icon demo</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="dist/bundle.js"></script>
+    <script src="build/demo.js"></script>
+    <style type="text/css">
+        .vui-icon {
+            width: 32px;
+            fill: #666
+        }
+        
+        .vui-icon-name {
+            font-size: 13px;
+            font-family: consolas;
+            color: #666
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="demo">
-        <vui-icon name="close"></vui-icon>
+        <table>
+            <tr>
+                <td>
+                    <vui-icon name="close"></vui-icon>
+                    <div class="vui-icon-name">close</div>
+                </td>
+                <td>
+                    <vui-icon name="edit"></vui-icon>
+                    <div class="vui-icon-name">add</div>
+                </td>
+            </tr>
+        </table>
     </div>
     <script type="text/javascript">
         new Vue({
