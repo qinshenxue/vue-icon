@@ -8,6 +8,7 @@ var paths = {};
 var queue = [];
 const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
+const uglify = require('rollup-plugin-uglify');
 const ejs = require('ejs');
 fs.readdir(svgFolder, (err, files) => {
 
@@ -44,7 +45,7 @@ function build() {
     rollup.rollup({
         entry: path.resolve(__dirname, './index.js'),
         plugins: [
-            babel()
+            babel(), uglify()
         ]
     }).then(function(bundle) {
         // Generate bundle + sourcemap
@@ -57,6 +58,20 @@ function build() {
             fs.writeFile(path.resolve(__dirname, '../index.html'), str, function(err) {
                 console.log('finish index.html')
             });
+        });
+    });
+
+    rollup.rollup({
+        entry: path.resolve(__dirname, '../src/index.js'),
+        plugins: [
+            babel(), uglify()
+        ]
+    }).then(function(bundle) {
+        var result = bundle.generate({
+            format: 'cjs'
+        });
+        fs.writeFile(path.resolve(__dirname, '../dist/index.js'), result.code, function(err) {
+            console.log('finish index.html')
         });
     });
 }
