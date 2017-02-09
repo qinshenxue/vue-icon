@@ -10,7 +10,7 @@ You can download the icon on the iconfont.cn or create your own icon to save as 
 
 Notes: svg attribute viewbox must be `0 0 1024 1024`
 
-#### How to change the component name
+### How to change the component name
 Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`
 
 # Demo
