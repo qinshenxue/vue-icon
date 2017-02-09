@@ -1,9 +1,12 @@
 # vui-icon
-vue2 svg icon component
 ![https://img.shields.io/npm/v/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
-view icon source [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
+
+vue2 svg icon component
+
+view icon source on [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
 
 ## How to use your component name
+download icon on [iconfont.cn](http://iconfont.cn) or
 可以在iconfont.cn上下载图标或者自己制作图标保存为svg文件，然后放到`src/svg/`文件夹下，执行`npm install && npm run build`
 
 注意：svg的viewbox为`0 0 1024 1024`
