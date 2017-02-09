@@ -8,7 +8,13 @@ vue2 svg icon component
 $ npm install vui-icon
 ```
 # Usage
+``` js
+const Vue = require('vue');
+const VuiIcon=require('vui-icon');
+Vue.use(VuiIcon);
+```
 ``` xml
+// *.vue
 <vui-icon name="close"></vui-icon>
 ```
 # Demo
