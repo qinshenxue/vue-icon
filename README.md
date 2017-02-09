@@ -6,13 +6,12 @@ vue2 svg icon component
 view icon source on [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
 
 ## How to use your component name
-download icon on [iconfont.cn](http://iconfont.cn) or
-可以在iconfont.cn上下载图标或者自己制作图标保存为svg文件，然后放到`src/svg/`文件夹下，执行`npm install && npm run build`
+You can download the icon on the iconfont.cn or create your own icon to save as SVG file. Put the icon in `src/svg/`, then run `npm install && npm run build`
 
-注意：svg的viewbox为`0 0 1024 1024`
+Notes: svg attribute viewbox must be `0 0 1024 1024`
 
 ### How to change the component name
-将`src/index.js`中`vui-icon`改为自己的名称，再执行`npm install && npm run build`
+Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`
 
 # Demo
 [https://qinshenxue.github.io/vui-icon/](https://qinshenxue.github.io/vui-icon/)
