@@ -25,6 +25,16 @@ Vue.use(VuiIcon);
 ``` xml
 <vui-icon name="close"></vui-icon>
 ```
+## Icon style
+You should define the icon style by yourself. Examples are as follows.
+``` css
+.vui-icon{
+    fill:#666
+}
+.vui-icon:hover{
+    fill:#000
+}
+```
 
 ## How to use your icon
 You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design your own icon to save as SVG file. Put the SVG file in `src/svg/`, and run `npm install && npm run build`.
