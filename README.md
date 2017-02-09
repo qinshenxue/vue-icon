@@ -1,7 +1,7 @@
 # vui-icon
 ![https://img.shields.io/npm/v/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
-![https://img.shields.io/npm/dm/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
-![https://img.shields.io/npm/l/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
+![https://img.shields.io/npm/dm/vui-icon.svg](https://img.shields.io/npm/dm/vui-icon.svg)
+![https://img.shields.io/npm/l/vui-icon.svg](https://img.shields.io/npm/l/vui-icon.svg)
 
 > vue2 svg icon component
 
