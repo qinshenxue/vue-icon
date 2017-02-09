@@ -55,10 +55,29 @@ Vue.use(install);
 
     </script>
     <style type="text/css">
-    #demo{
+    body{
+        margin:0;
+    }
+    .demo{
         width:1080px;
         margin:0 auto;
         overflow:hidden;
+            font-family: arial;
+    }
+    .github{
+        font-size:21px;
+        text-align:center;
+        padding:80px 0 80px;
+        background:#41B883;
+    }
+    .icons{
+        margin-top:30px;
+        overflow:hidden;
+    }
+   .github  a{
+        color:rgba(255,255,255,.9);
+        text-decoration:none;
+            border-bottom: 1px solid ;
     }
     .vui-icon-box{
         width:120px;
@@ -75,14 +94,19 @@ Vue.use(install);
         .vui-icon-name {
             margin-top:10px;
             font-size: 12px;
-            font-family: arial;
             color: #666;
         }
     </style>
 </head>
 
 <body>
-    <div id="demo">
+ <div class="github">
+    <a href="https://github.com/qinshenxue/vui-icon">https://github.com/qinshenxue/vui-icon</a>
+    </div>
+    <div class="demo">
+   
+
+    <div class="icons">
 
 <div class="vui-icon-box">
 <vui-icon name="add"></vui-icon>
@@ -499,11 +523,11 @@ Vue.use(install);
 <div class="vui-icon-name">wifi</div>
 </div>
 
-       
+       </div>
     </div>
     <script type="text/javascript">
         new Vue({
-            el: '#demo'
+            el: '.demo'
         })
     </script>
 
