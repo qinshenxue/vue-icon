@@ -8,7 +8,7 @@ view icon source on [iconfont.cn](http://iconfont.cn/plus/collections/detail?ci
 ### How to use your component name
 You can download the icon on the iconfont.cn or create your own icon to save as SVG file. Put the icon in `src/svg/`, then run `npm install && npm run build`
 
-Notes: svg attribute viewbox must be `0 0 1024 1024`
+Notes: The viewbox attribute of the svg file must be `0 0 1024 1024`
 
 ### How to change the component name
 Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`
