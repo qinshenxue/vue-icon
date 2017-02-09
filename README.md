@@ -14,7 +14,6 @@ const VuiIcon=require('vui-icon');
 Vue.use(VuiIcon);
 ```
 ``` xml
-// *.vue
 <vui-icon name="close"></vui-icon>
 ```
 # Demo
