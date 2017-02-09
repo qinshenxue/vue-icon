@@ -1,16 +1,16 @@
 # vui-icon
 ![https://img.shields.io/npm/v/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
 
-vue2 svg icon component
+> vue2 svg icon component
 
 view icon source on [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
 
-## How to use your component name
+### How to use your component name
 You can download the icon on the iconfont.cn or create your own icon to save as SVG file. Put the icon in `src/svg/`, then run `npm install && npm run build`
 
 Notes: svg attribute viewbox must be `0 0 1024 1024`
 
-### How to change the component name
+#### How to change the component name
 Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`
 
 # Demo
