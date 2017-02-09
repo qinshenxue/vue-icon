@@ -8,33 +8,41 @@
         <%-code %>
     </script>
     <style type="text/css">
+    #demo{
+        width:1080px;
+        margin:0 auto;
+        overflow:hidden;
+    }
+    .vui-icon-box{
+        width:120px;
+        height:100px;
+        float:left;
+        text-align:center;
+    }
+    
         .vui-icon {
             width: 32px;
             fill: #666
         }
         
         .vui-icon-name {
-            font-size: 13px;
-            font-family: consolas;
-            color: #666
+            margin-top:10px;
+            font-size: 12px;
+            font-family: arial;
+            color: #666;
         }
     </style>
 </head>
 
 <body>
     <div id="demo">
-        <table>
-            <tr>
-                <td>
-                    <vui-icon name="close"></vui-icon>
-                    <div class="vui-icon-name">close</div>
-                </td>
-                <td>
-                    <vui-icon name="edit"></vui-icon>
-                    <div class="vui-icon-name">add</div>
-                </td>
-            </tr>
-        </table>
+<% icons.forEach(function(icon){%>
+<div class="vui-icon-box">
+<vui-icon name="<%= icon %>"></vui-icon>
+<div class="vui-icon-name"><%= icon %></div>
+</div>
+<% })  %>
+       
     </div>
     <script type="text/javascript">
         new Vue({

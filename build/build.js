@@ -34,14 +34,10 @@ fs.readdir(svgFolder, (err, files) => {
 
     Promise.all(queue).then(function() {
         fs.writeFile(svgJs, 'export default ' + JSON.stringify(paths), function(err, data) {
-
             build();
         });
-
-
     });
 });
-
 
 
 function build() {
@@ -57,13 +53,10 @@ function build() {
             format: 'iife'
         });
 
-        ejs.renderFile(path.resolve(__dirname, '../index.ejs'), result, {}, function(err, str) {
-            // str => Rendered HTML string
-            console.log(str);
+        ejs.renderFile(path.resolve(__dirname, '../index.ejs'), { code: result.code, icons: Object.keys(paths) }, function(err, str) {
             fs.writeFile(path.resolve(__dirname, '../index.html'), str, function(err) {
-                console.log(err)
+                console.log('finish index.html')
             });
         });
-
     });
 }
