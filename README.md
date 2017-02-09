@@ -1,6 +1,6 @@
 # vui-icon
 vue2 svg icon component
-
+![https://img.shields.io/npm/v/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)
 view icon source [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
 
 ## How to use your component name
