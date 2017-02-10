@@ -10,6 +10,10 @@ const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
 const uglify = require('rollup-plugin-uglify');
 const ejs = require('ejs');
+
+const SVGO = require('svgo');
+const svgo = new SVGO()
+
 fs.readdir(svgFolder, (err, files) => {
 
     files.forEach(fileName => {
@@ -20,13 +24,19 @@ fs.readdir(svgFolder, (err, files) => {
                 if (err) {
                     reject(err);
                 } else {
-                    parser.parseString(data, function(err, result) {
-                        let a = result.svg.path.map(svgpath => {
-                            return svgpath.$.d;
-                        })
-                        paths[path.parse(fileName).name] = a;
-                        resolve()
+                    svgo.optimize(data, svgodata => {
+
+
+                        parser.parseString(svgodata.data, function(err, result) {
+                            let a = result.svg.path.map(svgpath => {
+                                return svgpath.$.d;
+                            })
+                            paths[path.parse(fileName).name] = a;
+                            resolve()
+                        });
+
                     });
+
                 }
             });
 
