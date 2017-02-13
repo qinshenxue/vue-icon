@@ -46,8 +46,13 @@ You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design yo
 Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`.
 
 
-# Component props
+# Component attributes
 
+| Attribute      | Description  | Type           |
+| ------------- | ------------- |:-------------:|
+| name      | The name of the SVG file | string |
+| w      | Icon's width     |  number |
+| h | Icon's height     |   number |
 
 # ChangeLog
 Detailed changes for each release are documented in the release notes.
