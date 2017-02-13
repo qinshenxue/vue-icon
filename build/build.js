@@ -25,13 +25,19 @@ fs.readdir(svgFolder, (err, files) => {
                     reject(err);
                 } else {
                     svgo.optimize(data, svgodata => {
-
-
                         parser.parseString(svgodata.data, function(err, result) {
-                            let a = result.svg.path.map(svgpath => {
-                                return svgpath.$.d;
-                            })
-                            paths[path.parse(fileName).name] = a;
+                            if (result.svg.path && result.svg.path.length) {
+                                let pathItem = {
+                                    path: result.svg.path.map(svgpath => {
+                                        return svgpath.$.d;
+                                    })
+                                };
+                                if (result.svg.$.viewBox != '0 0 1024 1024') {
+                                    pathItem.viewBox = result.svg.$.viewBox;
+                                }
+
+                                paths[path.parse(fileName).name] = pathItem;
+                            }
                             resolve()
                         });
 
@@ -66,7 +72,7 @@ function build() {
 
         ejs.renderFile(path.resolve(__dirname, '../index.ejs'), { code: result.code, icons: Object.keys(paths) }, function(err, str) {
             fs.writeFile(path.resolve(__dirname, '../index.html'), str, function(err) {
-                console.log('finish index.html')
+                console.log('finish', path.resolve(__dirname, '../index.html'))
             });
         });
     });
@@ -81,7 +87,7 @@ function build() {
             format: 'cjs'
         });
         fs.writeFile(path.resolve(__dirname, '../dist/index.js'), result.code, function(err) {
-            console.log('finish index.html')
+            console.log('finish', path.resolve(__dirname, '../dist/index.js'))
         });
     });
 }

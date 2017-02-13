@@ -19,15 +19,16 @@ export default function install(Vue) {
                 style.height = this.h + 'px';
             }
 
+            var svgData = svg[this.name];
             return h('svg', {
                 class: ["vui-icon", "icon-" + this.name],
                 style: style,
                 attrs: {
-                    viewBox: "0 0 1024 1024",
+                    viewBox: svgData.viewBox ? svgData.viewBox : "0 0 1024 1024",
                     version: "1.1",
                     xmlns: "http://www.w3.org/2000/svg"
                 }
-            }, svg[this.name].slice(0).map(p => {
+            }, svgData.path.slice(0).map(p => {
                 return h('path', {
                     attrs: {
                         d: p
