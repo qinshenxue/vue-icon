@@ -25,7 +25,7 @@ Vue.use(VuiIcon);
 ``` xml
 <vui-icon name="close"></vui-icon>
 ```
-## Icon style
+## Icon Style
 You should define the icon style in your project as follows.
 ``` css
 .vui-icon{
@@ -46,7 +46,7 @@ You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design yo
 Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`.
 
 
-# Component attributes
+# Component Attributes
 
 | Attribute      | Description  | Type           |
 | ------------- | ------------- |:-------------:|
