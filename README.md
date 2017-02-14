@@ -1,7 +1,7 @@
-# vui-icon
-[![https://img.shields.io/npm/v/vui-icon.svg](https://img.shields.io/npm/v/vui-icon.svg)](https://www.npmjs.com/package/vui-icon)
-[![https://img.shields.io/npm/dm/vui-icon.svg](https://img.shields.io/npm/dm/vui-icon.svg)](https://www.npmjs.com/package/vui-icon)
-![https://img.shields.io/npm/l/vui-icon.svg](https://img.shields.io/npm/l/vui-icon.svg)
+# vue-icon
+[![https://img.shields.io/npm/v/vue-icon.svg](https://img.shields.io/npm/v/vue-icon.svg)](https://www.npmjs.com/package/vue-icon)
+[![https://img.shields.io/npm/dm/vue-icon.svg](https://img.shields.io/npm/dm/vue-icon.svg)](https://www.npmjs.com/package/vue-icon)
+![https://img.shields.io/npm/l/vue-icon.svg](https://img.shields.io/npm/l/vue-icon.svg)
 
 > vue2 svg icon component
 
@@ -9,17 +9,17 @@ The icons are from [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=
 
 
 # Demo
-[https://qinshenxue.github.io/vui-icon/](https://qinshenxue.github.io/vui-icon/)
+[https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
 ![](demo.png)
 
 # Installation
 ```
-$ npm install vui-icon
+$ npm install vue-icon
 ```
 # Usage
 ``` js
 const Vue = require('vue');
-const Icon=require('vui-icon');
+const Icon=require('vue-icon');
 Vue.component('your-component-name',Icon);
 ```
 ``` xml
