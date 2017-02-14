@@ -19,32 +19,25 @@ $ npm install vui-icon
 # Usage
 ``` js
 const Vue = require('vue');
-const VuiIcon=require('vui-icon');
-Vue.use(VuiIcon);
+const Icon=require('vui-icon');
+Vue.component('your-component-name',Icon);
 ```
 ``` xml
-<vui-icon name="close"></vui-icon>
+<your-component-name name="close"></your-component-name>
 ```
 ## Icon Style
 You should define the icon style in your project as follows.
 ``` css
-.vui-icon{
+.icon{
     fill:#666
 }
-.vui-icon:hover{
+.icon:hover{
     fill:#000
 }
 .icon-close{
 	fill:red
 }
 ```
-## How to use your icon
-You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design your own icon to save as SVG file. Put the SVG file in `src/svg/`, and run `npm install && npm run build`.
-
-
-## How to change the component name
-Find `vui-icon` in `src/index.js`, change it to your component name, then run `npm install && npm run build`.
-
 
 # Component Attributes
 
@@ -54,5 +47,8 @@ Find `vui-icon` in `src/index.js`, change it to your component name, then run `n
 | w      | Icon's width     |  number |
 | h | Icon's height     |   number |
 
-# ChangeLog
+# How to use your icon
+You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design your own icon to save as SVG file. Put the SVG file in `src/svg/`, and run `npm install && npm run build`.
+
+# Changelog
 Detailed changes for each release are documented in the release notes.

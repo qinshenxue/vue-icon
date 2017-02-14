@@ -59,10 +59,13 @@ fs.readdir(svgFolder, (err, files) => {
 
 function build() {
     rollup.rollup({
-        entry: path.resolve(__dirname, './index.js'),
+        entry: path.resolve(__dirname, './demo.js'),
         plugins: [
             babel(), uglify()
-        ]
+        ],
+        globals: {
+            Vue: 'Vue'
+        }
     }).then(function(bundle) {
         // Generate bundle + sourcemap
         var result = bundle.generate({

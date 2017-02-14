@@ -32,19 +32,19 @@
         text-decoration:none;
             border-bottom: 1px solid ;
     }
-    .vui-icon-box{
+    .box{
         width:120px;
         height:100px;
         float:left;
         text-align:center;
     }
     
-        .vui-icon {
+        .icon {
             width: 32px;
             fill: #666
         }
         
-        .vui-icon-name {
+        .name {
             margin-top:10px;
             font-size: 12px;
             color: #666;
@@ -61,9 +61,9 @@
 
     <div class="icons">
 <% icons.forEach(function(icon){%>
-<div class="vui-icon-box">
+<div class="box">
 <vui-icon name="<%= icon %>"></vui-icon>
-<div class="vui-icon-name"><%= icon %></div>
+<div class="name"><%= icon %></div>
 </div>
 <% })  %>
        </div>
