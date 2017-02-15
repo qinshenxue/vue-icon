@@ -12,12 +12,11 @@ The icons are from [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=
 [https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
 ![](demo.png)
 
-# Installation
-```
-$ npm install vue-icon
-```
 # Usage
 using npm
+``` shell
+$ npm install vue-icon
+```
 ``` js
 const Vue = require('vue');
 const Icon = require('vue-icon');
