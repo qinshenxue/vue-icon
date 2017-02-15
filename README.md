@@ -28,7 +28,8 @@ Vue.component('your-component-name',Icon);
 ```
 Or using script tag
 ``` xml
-<script type="text/javascript" src="icon.min.js"></script>
+<script type="text/javascript" src="lib/icon.min.js"></script>
+// component name is icon by default
 <icon name="close"></icon>
 ```
 
