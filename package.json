@@ -2,7 +2,7 @@
     "name": "vue-icon",
     "version": "1.1.0",
     "description": "vue2 svg icon component",
-    "main": "dist/index.js",
+    "main": "lib/component.min.js",
     "scripts": {
         "build": "node build/build.js",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
         "type": "git",
         "url": "git+https://github.com/qinshenxue/vui-icon.git"
     },
-    "author": "",
+    "author": "qinshenxue",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/qinshenxue/vui-icon/issues"
