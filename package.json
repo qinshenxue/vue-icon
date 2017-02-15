@@ -1,6 +1,6 @@
 {
     "name": "vue-icon",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "vue2 svg icon component",
     "main": "lib/component.min.js",
     "scripts": {
