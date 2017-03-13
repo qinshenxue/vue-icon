@@ -1,0 +1,8 @@
+build
+.vscode
+src
+*.log
+*.png
+index.ejs
+index.html
+.*
