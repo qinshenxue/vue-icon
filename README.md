@@ -12,19 +12,27 @@ The icons are from [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=
 [https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
 ![](demo.png)
 
-# Installation
-```
+# Usage
+using npm
+``` shell
 $ npm install vue-icon
 ```
-# Usage
 ``` js
 const Vue = require('vue');
-const Icon=require('vue-icon');
+const Icon = require('vue-icon');
 Vue.component('your-component-name',Icon);
 ```
 ``` xml
 <your-component-name name="close"></your-component-name>
 ```
+Or using script tag
+``` xml
+<script type="text/javascript" src="vue.js"></script>
+<script type="text/javascript" src="lib/icon.min.js"></script>
+<!-- component name is icon by default -->
+<icon name="close"></icon>
+```
+
 ## Icon Style
 You should define the icon style in your project as follows.
 ``` css

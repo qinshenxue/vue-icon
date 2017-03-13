@@ -1,11 +1,11 @@
-var fs = require('fs');
-var xml2js = require('xml2js');
-var path = require('path');
-var parser = new xml2js.Parser();
-var svgFolder = path.resolve(__dirname, '../src/svg/');
-var svgJs = path.resolve(__dirname, '../src/svg.js');
-var paths = {};
-var queue = [];
+const fs = require('fs');
+const xml2js = require('xml2js');
+const path = require('path');
+const parser = new xml2js.Parser();
+const svgFolder = path.resolve(__dirname, '../src/svg/');
+const svgJs = path.resolve(__dirname, '../src/svg.js');
+const paths = {};
+const queue = [];
 const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
 const uglify = require('rollup-plugin-uglify');
@@ -59,7 +59,7 @@ fs.readdir(svgFolder, (err, files) => {
 
 function build() {
     rollup.rollup({
-        entry: path.resolve(__dirname, './demo.js'),
+        entry: path.resolve(__dirname, '../src/icon.js'),
         plugins: [
             babel(), uglify()
         ],
@@ -67,30 +67,33 @@ function build() {
             Vue: 'Vue'
         }
     }).then(function(bundle) {
-        // Generate bundle + sourcemap
-        var result = bundle.generate({
-            // output format - 'amd', 'cjs', 'es', 'iife', 'umd'
+        let result = bundle.generate({
             format: 'iife'
         });
-
-        ejs.renderFile(path.resolve(__dirname, '../index.ejs'), { code: result.code, icons: Object.keys(paths) }, function(err, str) {
-            fs.writeFile(path.resolve(__dirname, '../index.html'), str, function(err) {
-                console.log('finish', path.resolve(__dirname, '../index.html'))
-            });
+        fs.writeFile(path.resolve(__dirname, '../lib/icon.min.js'), result.code, function(err) {
+            console.log('icon.min.js finished')
         });
+
     });
 
     rollup.rollup({
-        entry: path.resolve(__dirname, '../src/index.js'),
+        entry: path.resolve(__dirname, '../src/component.js'),
         plugins: [
             babel(), uglify()
         ]
     }).then(function(bundle) {
-        var result = bundle.generate({
+        let result = bundle.generate({
             format: 'cjs'
         });
-        fs.writeFile(path.resolve(__dirname, '../dist/index.js'), result.code, function(err) {
-            console.log('finish', path.resolve(__dirname, '../dist/index.js'))
+        fs.writeFile(path.resolve(__dirname, '../lib/component.min.js'), result.code, function(err) {
+            console.log('component.min.js finished')
+        });
+    });
+
+
+    ejs.renderFile(path.resolve(__dirname, '../index.ejs'), { icons: Object.keys(paths) }, function(err, str) {
+        fs.writeFile(path.resolve(__dirname, '../index.html'), str, function(err) {
+            console.log('index.html finished')
         });
     });
 }

@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>vui-icon demo</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script>
-        <%-code %>
-    </script>
+    <script src="lib/icon.min.js?v=<%=Date.now()%>"></script>
     <style type="text/css">
     body{
         margin:0;
@@ -54,7 +52,7 @@
 
 <body>
  <div class="github">
-    <a href="https://github.com/qinshenxue/vui-icon">https://github.com/qinshenxue/vui-icon</a>
+    <a href="https://github.com/qinshenxue/vue-icon">https://github.com/qinshenxue/vue-icon</a>
     </div>
     <div class="demo">
    
@@ -62,7 +60,7 @@
     <div class="icons">
 <% icons.forEach(function(icon){%>
 <div class="box">
-<vui-icon name="<%= icon %>"></vui-icon>
+<icon name="<%= icon %>"></icon>
 <div class="name"><%= icon %></div>
 </div>
 <% })  %>
