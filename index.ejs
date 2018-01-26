@@ -4,73 +4,133 @@
     <meta charset="UTF-8">
     <title>vui-icon demo</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="lib/icon.min.js?v=<%=Date.now()%>"></script>
+    <script src="lib/icon.min.js?v=<%= Date.now() %>"></script>
     <style type="text/css">
-    body{
-        margin:0;
-    }
-    .demo{
-        width:1080px;
-        margin:0 auto;
-        overflow:hidden;
-            font-family: arial;
-    }
-    .github{
-        font-size:21px;
-        text-align:center;
-        padding:80px 0 80px;
-        background:#41B883;
-    }
-    .icons{
-        margin-top:30px;
-        overflow:hidden;
-    }
-   .github  a{
-        color:rgba(255,255,255,.9);
-        text-decoration:none;
-            border-bottom: 1px solid ;
-    }
-    .box{
-        width:120px;
-        height:100px;
-        float:left;
-        text-align:center;
-    }
-    
-        .icon {
-            width: 32px;
-            fill: #666
+        body {
+            margin: 0;
         }
-        
+
+        .demo {
+            width: 1080px;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: arial;
+        }
+
+        .github {
+            font-size: 20px;
+            text-align: center;
+            padding: 80px 0;
+            background: #41B883;
+            margin-bottom: 20px;
+        }
+
+        .icons {
+            overflow: hidden;
+        }
+
+        .github a {
+            color: rgba(255, 255, 255, .9);
+            text-decoration: none;
+            border-bottom: 1px solid;
+        }
+
+        .box {
+            width: 120px;
+            height: 100px;
+            float: left;
+            text-align: center;
+        }
+
+        .icon {
+            width: 24px;
+            color: #384047;
+        }
+
         .name {
-            margin-top:10px;
+            margin-top: 10px;
             font-size: 12px;
             color: #666;
         }
+
+        .search {
+            position: relative;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .search .icon-search {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            margin-top: -12px;
+            color: #aaa;
+        }
+
+        .search input {
+            display: block;
+            width: 100%;
+            height: 60px;
+            padding: 0 20px 0 54px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .search input:focus {
+            border: 1px solid #41B883
+        }
+
+        .search input:focus + .icon {
+            color: #41B883
+        }
+
     </style>
 </head>
 
 <body>
- <div class="github">
+<div class="github">
     <a href="https://github.com/qinshenxue/vue-icon">https://github.com/qinshenxue/vue-icon</a>
-    </div>
-    <div class="demo">
-   
-
-    <div class="icons">
-<% icons.forEach(function(icon){%>
-<div class="box">
-<icon name="<%= icon %>"></icon>
-<div class="name"><%= icon %></div>
 </div>
-<% })  %>
-       </div>
+<div class="demo">
+
+
+    <div class="search">
+        <input type="text" placeholder="Search icons" @input="searchIcon">
+        <icon name="search"></icon>
     </div>
-    <script type="text/javascript">
-        new Vue({
-            el: '.demo'
-        })
-    </script>
+    <div class="icons">
+        <% icons.forEach(function(icon){ %>
+        <div class="box" title="<%= icon %>">
+            <icon name="<%= icon %>"></icon>
+            <div class="name"><%= icon %></div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<script type="text/javascript">
+    new Vue({
+        el: '.demo',
+        methods: {
+            searchIcon: function (e) {
+                var keyword = e.target.value
+
+                var arr = Array.prototype.slice.call(document.querySelectorAll('.box'))
+
+                arr.forEach(function (el) {
+                    if (el.title.indexOf(keyword) > -1) {
+                        el.style.display = 'block'
+                    } else {
+                        el.style.display = 'none'
+                    }
+                })
+            }
+        }
+    })
+</script>
+
 
 </body>
 

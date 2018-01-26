@@ -1,39 +1,39 @@
-import svg from './svg';
-
+import icons from './icons'
 export default {
     props: {
         name: {
             type: String,
             required: true
-        },
-        w: Number,
-        h: Number
+        }
     },
 
-    render: function(h) {
-        var style = {};
-        if (this.w) {
-            style.width = this.w + 'px';
-        }
-        if (this.h) {
-            style.height = this.h + 'px';
+    render (h) {
+        const children = [];
+
+        const icon = icons[this.name]
+
+        for (let i = 0, j = icon.length; i < j; i += 2) {
+            children.push(
+                h(icon[i], {
+                    attrs: icon[i + 1]
+                })
+            );
         }
 
-        var svgData = svg[this.name];
-        return h('svg', {
-            class: ["icon icon-" + this.name],
-            style: style,
-            attrs: {
-                viewBox: svgData.viewBox ? svgData.viewBox : "0 0 1024 1024",
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg"
-            }
-        }, svgData.path.slice(0).map(p => {
-            return h('path', {
+        return h(
+            "svg",
+            {
+                class: ["icon", "icon-" + this.name],
                 attrs: {
-                    d: p
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-width": "2",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
                 }
-            })
-        }))
+            },
+            children
+        );
     }
-}
+};

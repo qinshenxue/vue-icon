@@ -4,518 +4,1443 @@
     <meta charset="UTF-8">
     <title>vui-icon demo</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="lib/icon.min.js?v=1487169968686"></script>
+    <script src="lib/icon.min.js?v=1516960911840"></script>
     <style type="text/css">
-    body{
-        margin:0;
-    }
-    .demo{
-        width:1080px;
-        margin:0 auto;
-        overflow:hidden;
-            font-family: arial;
-    }
-    .github{
-        font-size:21px;
-        text-align:center;
-        padding:80px 0 80px;
-        background:#41B883;
-    }
-    .icons{
-        margin-top:30px;
-        overflow:hidden;
-    }
-   .github  a{
-        color:rgba(255,255,255,.9);
-        text-decoration:none;
-            border-bottom: 1px solid ;
-    }
-    .box{
-        width:120px;
-        height:100px;
-        float:left;
-        text-align:center;
-    }
-    
-        .icon {
-            width: 32px;
-            fill: #666
+        body {
+            margin: 0;
         }
-        
+
+        .demo {
+            width: 1080px;
+            margin: 0 auto;
+            overflow: hidden;
+            font-family: arial;
+        }
+
+        .github {
+            font-size: 20px;
+            text-align: center;
+            padding: 80px 0;
+            background: #41B883;
+            margin-bottom: 20px;
+        }
+
+        .icons {
+            overflow: hidden;
+        }
+
+        .github a {
+            color: rgba(255, 255, 255, .9);
+            text-decoration: none;
+            border-bottom: 1px solid;
+        }
+
+        .box {
+            width: 120px;
+            height: 100px;
+            float: left;
+            text-align: center;
+        }
+
+        .icon {
+            width: 24px;
+            color: #384047;
+        }
+
         .name {
-            margin-top:10px;
+            margin-top: 10px;
             font-size: 12px;
             color: #666;
         }
+
+        .search {
+            position: relative;
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .search .icon-search {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            margin-top: -12px;
+            color: #aaa;
+        }
+
+        .search input {
+            display: block;
+            width: 100%;
+            height: 60px;
+            padding: 0 20px 0 54px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .search input:focus {
+            border: 1px solid #41B883
+        }
+
+        .search input:focus + .icon {
+            color: #41B883
+        }
+
     </style>
 </head>
 
 <body>
- <div class="github">
-    <a href="https://github.com/qinshenxue/vui-icon">https://github.com/qinshenxue/vui-icon</a>
-    </div>
-    <div class="demo">
-   
+<div class="github">
+    <a href="https://github.com/qinshenxue/vue-icon">https://github.com/qinshenxue/vue-icon</a>
+</div>
+<div class="demo">
 
+
+    <div class="search">
+        <input type="text" placeholder="Search icons" @input="searchIcon">
+        <icon name="search"></icon>
+    </div>
     <div class="icons">
-
-<div class="box">
-<icon name="add"></icon>
-<div class="name">add</div>
-</div>
-
-<div class="box">
-<icon name="attention"></icon>
-<div class="name">attention</div>
-</div>
-
-<div class="box">
-<icon name="appreciate"></icon>
-<div class="name">appreciate</div>
-</div>
-
-<div class="box">
-<icon name="apps"></icon>
-<div class="name">apps</div>
-</div>
-
-<div class="box">
-<icon name="attention_fill"></icon>
-<div class="name">attention_fill</div>
-</div>
-
-<div class="box">
-<icon name="appreciate_fill"></icon>
-<div class="name">appreciate_fill</div>
-</div>
-
-<div class="box">
-<icon name="cart"></icon>
-<div class="name">cart</div>
-</div>
-
-<div class="box">
-<icon name="back"></icon>
-<div class="name">back</div>
-</div>
-
-<div class="box">
-<icon name="back_android"></icon>
-<div class="name">back_android</div>
-</div>
-
-<div class="box">
-<icon name="check"></icon>
-<div class="name">check</div>
-</div>
-
-<div class="box">
-<icon name="camera"></icon>
-<div class="name">camera</div>
-</div>
-
-<div class="box">
-<icon name="close"></icon>
-<div class="name">close</div>
-</div>
-
-<div class="box">
-<icon name="comment"></icon>
-<div class="name">comment</div>
-</div>
-
-<div class="box">
-<icon name="delete"></icon>
-<div class="name">delete</div>
-</div>
-
-<div class="box">
-<icon name="down"></icon>
-<div class="name">down</div>
-</div>
-
-<div class="box">
-<icon name="edit"></icon>
-<div class="name">edit</div>
-</div>
-
-<div class="box">
-<icon name="emoji"></icon>
-<div class="name">emoji</div>
-</div>
-
-<div class="box">
-<icon name="favor"></icon>
-<div class="name">favor</div>
-</div>
-
-<div class="box">
-<icon name="favor_fill"></icon>
-<div class="name">favor_fill</div>
-</div>
-
-<div class="box">
-<icon name="fold"></icon>
-<div class="name">fold</div>
-</div>
-
-<div class="box">
-<icon name="filter"></icon>
-<div class="name">filter</div>
-</div>
-
-<div class="box">
-<icon name="form"></icon>
-<div class="name">form</div>
-</div>
-
-<div class="box">
-<icon name="full"></icon>
-<div class="name">full</div>
-</div>
-
-<div class="box">
-<icon name="forward"></icon>
-<div class="name">forward</div>
-</div>
-
-<div class="box">
-<icon name="home"></icon>
-<div class="name">home</div>
-</div>
-
-<div class="box">
-<icon name="info_fill"></icon>
-<div class="name">info_fill</div>
-</div>
-
-<div class="box">
-<icon name="info"></icon>
-<div class="name">info</div>
-</div>
-
-<div class="box">
-<icon name="like"></icon>
-<div class="name">like</div>
-</div>
-
-<div class="box">
-<icon name="loading"></icon>
-<div class="name">loading</div>
-</div>
-
-<div class="box">
-<icon name="link"></icon>
-<div class="name">link</div>
-</div>
-
-<div class="box">
-<icon name="location_fill"></icon>
-<div class="name">location_fill</div>
-</div>
-
-<div class="box">
-<icon name="lock"></icon>
-<div class="name">lock</div>
-</div>
-
-<div class="box">
-<icon name="mark"></icon>
-<div class="name">mark</div>
-</div>
-
-<div class="box">
-<icon name="mark_fill"></icon>
-<div class="name">mark_fill</div>
-</div>
-
-<div class="box">
-<icon name="mobile_fill"></icon>
-<div class="name">mobile_fill</div>
-</div>
-
-<div class="box">
-<icon name="message"></icon>
-<div class="name">message</div>
-</div>
-
-<div class="box">
-<icon name="mobile"></icon>
-<div class="name">mobile</div>
-</div>
-
-<div class="box">
-<icon name="move"></icon>
-<div class="name">move</div>
-</div>
-
-<div class="box">
-<icon name="more"></icon>
-<div class="name">more</div>
-</div>
-
-<div class="box">
-<icon name="notification"></icon>
-<div class="name">notification</div>
-</div>
-
-<div class="box">
-<icon name="location"></icon>
-<div class="name">location</div>
-</div>
-
-<div class="box">
-<icon name="order"></icon>
-<div class="name">order</div>
-</div>
-
-<div class="box">
-<icon name="pay"></icon>
-<div class="name">pay</div>
-</div>
-
-<div class="box">
-<icon name="people"></icon>
-<div class="name">people</div>
-</div>
-
-<div class="box">
-<icon name="phone"></icon>
-<div class="name">phone</div>
-</div>
-
-<div class="box">
-<icon name="pic"></icon>
-<div class="name">pic</div>
-</div>
-
-<div class="box">
-<icon name="post"></icon>
-<div class="name">post</div>
-</div>
-
-<div class="box">
-<icon name="pull_down"></icon>
-<div class="name">pull_down</div>
-</div>
-
-<div class="box">
-<icon name="pull_left"></icon>
-<div class="name">pull_left</div>
-</div>
-
-<div class="box">
-<icon name="pull_up"></icon>
-<div class="name">pull_up</div>
-</div>
-
-<div class="box">
-<icon name="pull_right"></icon>
-<div class="name">pull_right</div>
-</div>
-
-<div class="box">
-<icon name="qr_code"></icon>
-<div class="name">qr_code</div>
-</div>
-
-<div class="box">
-<icon name="radio_box"></icon>
-<div class="name">radio_box</div>
-</div>
-
-<div class="box">
-<icon name="question"></icon>
-<div class="name">question</div>
-</div>
-
-<div class="box">
-<icon name="radio_box_fill"></icon>
-<div class="name">radio_box_fill</div>
-</div>
-
-<div class="box">
-<icon name="recharge"></icon>
-<div class="name">recharge</div>
-</div>
-
-<div class="box">
-<icon name="refresh_arrow"></icon>
-<div class="name">refresh_arrow</div>
-</div>
-
-<div class="box">
-<icon name="refresh"></icon>
-<div class="name">refresh</div>
-</div>
-
-<div class="box">
-<icon name="remind"></icon>
-<div class="name">remind</div>
-</div>
-
-<div class="box">
-<icon name="right"></icon>
-<div class="name">right</div>
-</div>
-
-<div class="box">
-<icon name="round_add"></icon>
-<div class="name">round_add</div>
-</div>
-
-<div class="box">
-<icon name="round"></icon>
-<div class="name">round</div>
-</div>
-
-<div class="box">
-<icon name="round_check"></icon>
-<div class="name">round_check</div>
-</div>
-
-<div class="box">
-<icon name="round_check_fill"></icon>
-<div class="name">round_check_fill</div>
-</div>
-
-<div class="box">
-<icon name="round_close"></icon>
-<div class="name">round_close</div>
-</div>
-
-<div class="box">
-<icon name="round_close_fill"></icon>
-<div class="name">round_close_fill</div>
-</div>
-
-<div class="box">
-<icon name="round_down"></icon>
-<div class="name">round_down</div>
-</div>
-
-<div class="box">
-<icon name="round_right"></icon>
-<div class="name">round_right</div>
-</div>
-
-<div class="box">
-<icon name="round_left_fill"></icon>
-<div class="name">round_left_fill</div>
-</div>
-
-<div class="box">
-<icon name="round_right_fill"></icon>
-<div class="name">round_right_fill</div>
-</div>
-
-<div class="box">
-<icon name="safe"></icon>
-<div class="name">safe</div>
-</div>
-
-<div class="box">
-<icon name="scan"></icon>
-<div class="name">scan</div>
-</div>
-
-<div class="box">
-<icon name="search"></icon>
-<div class="name">search</div>
-</div>
-
-<div class="box">
-<icon name="settings"></icon>
-<div class="name">settings</div>
-</div>
-
-<div class="box">
-<icon name="share"></icon>
-<div class="name">share</div>
-</div>
-
-<div class="box">
-<icon name="square"></icon>
-<div class="name">square</div>
-</div>
-
-<div class="box">
-<icon name="square_check_fill"></icon>
-<div class="name">square_check_fill</div>
-</div>
-
-<div class="box">
-<icon name="square_check"></icon>
-<div class="name">square_check</div>
-</div>
-
-<div class="box">
-<icon name="subscription"></icon>
-<div class="name">subscription</div>
-</div>
-
-<div class="box">
-<icon name="tag"></icon>
-<div class="name">tag</div>
-</div>
-
-<div class="box">
-<icon name="tag_fill"></icon>
-<div class="name">tag_fill</div>
-</div>
-
-<div class="box">
-<icon name="text"></icon>
-<div class="name">text</div>
-</div>
-
-<div class="box">
-<icon name="time"></icon>
-<div class="name">time</div>
-</div>
-
-<div class="box">
-<icon name="top"></icon>
-<div class="name">top</div>
-</div>
-
-<div class="box">
-<icon name="time_fill"></icon>
-<div class="name">time_fill</div>
-</div>
-
-<div class="box">
-<icon name="unfold"></icon>
-<div class="name">unfold</div>
-</div>
-
-<div class="box">
-<icon name="usefull"></icon>
-<div class="name">usefull</div>
-</div>
-
-<div class="box">
-<icon name="warn"></icon>
-<div class="name">warn</div>
-</div>
-
-<div class="box">
-<icon name="warn_fill"></icon>
-<div class="name">warn_fill</div>
-</div>
-
-<div class="box">
-<icon name="wifi"></icon>
-<div class="name">wifi</div>
-</div>
-
-       </div>
+        
+        <div class="box" title="activity">
+            <icon name="activity"></icon>
+            <div class="name">activity</div>
+        </div>
+        
+        <div class="box" title="airplay">
+            <icon name="airplay"></icon>
+            <div class="name">airplay</div>
+        </div>
+        
+        <div class="box" title="alert-circle">
+            <icon name="alert-circle"></icon>
+            <div class="name">alert-circle</div>
+        </div>
+        
+        <div class="box" title="alert-octagon">
+            <icon name="alert-octagon"></icon>
+            <div class="name">alert-octagon</div>
+        </div>
+        
+        <div class="box" title="alert-triangle">
+            <icon name="alert-triangle"></icon>
+            <div class="name">alert-triangle</div>
+        </div>
+        
+        <div class="box" title="align-center">
+            <icon name="align-center"></icon>
+            <div class="name">align-center</div>
+        </div>
+        
+        <div class="box" title="align-justify">
+            <icon name="align-justify"></icon>
+            <div class="name">align-justify</div>
+        </div>
+        
+        <div class="box" title="align-left">
+            <icon name="align-left"></icon>
+            <div class="name">align-left</div>
+        </div>
+        
+        <div class="box" title="align-right">
+            <icon name="align-right"></icon>
+            <div class="name">align-right</div>
+        </div>
+        
+        <div class="box" title="anchor">
+            <icon name="anchor"></icon>
+            <div class="name">anchor</div>
+        </div>
+        
+        <div class="box" title="aperture">
+            <icon name="aperture"></icon>
+            <div class="name">aperture</div>
+        </div>
+        
+        <div class="box" title="arrow-down-circle">
+            <icon name="arrow-down-circle"></icon>
+            <div class="name">arrow-down-circle</div>
+        </div>
+        
+        <div class="box" title="arrow-down-left">
+            <icon name="arrow-down-left"></icon>
+            <div class="name">arrow-down-left</div>
+        </div>
+        
+        <div class="box" title="arrow-down-right">
+            <icon name="arrow-down-right"></icon>
+            <div class="name">arrow-down-right</div>
+        </div>
+        
+        <div class="box" title="arrow-down">
+            <icon name="arrow-down"></icon>
+            <div class="name">arrow-down</div>
+        </div>
+        
+        <div class="box" title="arrow-left-circle">
+            <icon name="arrow-left-circle"></icon>
+            <div class="name">arrow-left-circle</div>
+        </div>
+        
+        <div class="box" title="arrow-left">
+            <icon name="arrow-left"></icon>
+            <div class="name">arrow-left</div>
+        </div>
+        
+        <div class="box" title="arrow-right-circle">
+            <icon name="arrow-right-circle"></icon>
+            <div class="name">arrow-right-circle</div>
+        </div>
+        
+        <div class="box" title="arrow-right">
+            <icon name="arrow-right"></icon>
+            <div class="name">arrow-right</div>
+        </div>
+        
+        <div class="box" title="arrow-up-circle">
+            <icon name="arrow-up-circle"></icon>
+            <div class="name">arrow-up-circle</div>
+        </div>
+        
+        <div class="box" title="arrow-up-left">
+            <icon name="arrow-up-left"></icon>
+            <div class="name">arrow-up-left</div>
+        </div>
+        
+        <div class="box" title="arrow-up-right">
+            <icon name="arrow-up-right"></icon>
+            <div class="name">arrow-up-right</div>
+        </div>
+        
+        <div class="box" title="arrow-up">
+            <icon name="arrow-up"></icon>
+            <div class="name">arrow-up</div>
+        </div>
+        
+        <div class="box" title="at-sign">
+            <icon name="at-sign"></icon>
+            <div class="name">at-sign</div>
+        </div>
+        
+        <div class="box" title="award">
+            <icon name="award"></icon>
+            <div class="name">award</div>
+        </div>
+        
+        <div class="box" title="bar-chart-2">
+            <icon name="bar-chart-2"></icon>
+            <div class="name">bar-chart-2</div>
+        </div>
+        
+        <div class="box" title="bar-chart">
+            <icon name="bar-chart"></icon>
+            <div class="name">bar-chart</div>
+        </div>
+        
+        <div class="box" title="battery-charging">
+            <icon name="battery-charging"></icon>
+            <div class="name">battery-charging</div>
+        </div>
+        
+        <div class="box" title="battery">
+            <icon name="battery"></icon>
+            <div class="name">battery</div>
+        </div>
+        
+        <div class="box" title="bell-off">
+            <icon name="bell-off"></icon>
+            <div class="name">bell-off</div>
+        </div>
+        
+        <div class="box" title="bell">
+            <icon name="bell"></icon>
+            <div class="name">bell</div>
+        </div>
+        
+        <div class="box" title="bluetooth">
+            <icon name="bluetooth"></icon>
+            <div class="name">bluetooth</div>
+        </div>
+        
+        <div class="box" title="bold">
+            <icon name="bold"></icon>
+            <div class="name">bold</div>
+        </div>
+        
+        <div class="box" title="book-open">
+            <icon name="book-open"></icon>
+            <div class="name">book-open</div>
+        </div>
+        
+        <div class="box" title="book">
+            <icon name="book"></icon>
+            <div class="name">book</div>
+        </div>
+        
+        <div class="box" title="bookmark">
+            <icon name="bookmark"></icon>
+            <div class="name">bookmark</div>
+        </div>
+        
+        <div class="box" title="box">
+            <icon name="box"></icon>
+            <div class="name">box</div>
+        </div>
+        
+        <div class="box" title="briefcase">
+            <icon name="briefcase"></icon>
+            <div class="name">briefcase</div>
+        </div>
+        
+        <div class="box" title="calendar">
+            <icon name="calendar"></icon>
+            <div class="name">calendar</div>
+        </div>
+        
+        <div class="box" title="camera-off">
+            <icon name="camera-off"></icon>
+            <div class="name">camera-off</div>
+        </div>
+        
+        <div class="box" title="camera">
+            <icon name="camera"></icon>
+            <div class="name">camera</div>
+        </div>
+        
+        <div class="box" title="cast">
+            <icon name="cast"></icon>
+            <div class="name">cast</div>
+        </div>
+        
+        <div class="box" title="check-circle">
+            <icon name="check-circle"></icon>
+            <div class="name">check-circle</div>
+        </div>
+        
+        <div class="box" title="check-square">
+            <icon name="check-square"></icon>
+            <div class="name">check-square</div>
+        </div>
+        
+        <div class="box" title="check">
+            <icon name="check"></icon>
+            <div class="name">check</div>
+        </div>
+        
+        <div class="box" title="chevron-down">
+            <icon name="chevron-down"></icon>
+            <div class="name">chevron-down</div>
+        </div>
+        
+        <div class="box" title="chevron-left">
+            <icon name="chevron-left"></icon>
+            <div class="name">chevron-left</div>
+        </div>
+        
+        <div class="box" title="chevron-right">
+            <icon name="chevron-right"></icon>
+            <div class="name">chevron-right</div>
+        </div>
+        
+        <div class="box" title="chevron-up">
+            <icon name="chevron-up"></icon>
+            <div class="name">chevron-up</div>
+        </div>
+        
+        <div class="box" title="chevrons-down">
+            <icon name="chevrons-down"></icon>
+            <div class="name">chevrons-down</div>
+        </div>
+        
+        <div class="box" title="chevrons-left">
+            <icon name="chevrons-left"></icon>
+            <div class="name">chevrons-left</div>
+        </div>
+        
+        <div class="box" title="chevrons-right">
+            <icon name="chevrons-right"></icon>
+            <div class="name">chevrons-right</div>
+        </div>
+        
+        <div class="box" title="chevrons-up">
+            <icon name="chevrons-up"></icon>
+            <div class="name">chevrons-up</div>
+        </div>
+        
+        <div class="box" title="chrome">
+            <icon name="chrome"></icon>
+            <div class="name">chrome</div>
+        </div>
+        
+        <div class="box" title="circle">
+            <icon name="circle"></icon>
+            <div class="name">circle</div>
+        </div>
+        
+        <div class="box" title="clipboard">
+            <icon name="clipboard"></icon>
+            <div class="name">clipboard</div>
+        </div>
+        
+        <div class="box" title="clock">
+            <icon name="clock"></icon>
+            <div class="name">clock</div>
+        </div>
+        
+        <div class="box" title="cloud-drizzle">
+            <icon name="cloud-drizzle"></icon>
+            <div class="name">cloud-drizzle</div>
+        </div>
+        
+        <div class="box" title="cloud-lightning">
+            <icon name="cloud-lightning"></icon>
+            <div class="name">cloud-lightning</div>
+        </div>
+        
+        <div class="box" title="cloud-off">
+            <icon name="cloud-off"></icon>
+            <div class="name">cloud-off</div>
+        </div>
+        
+        <div class="box" title="cloud-rain">
+            <icon name="cloud-rain"></icon>
+            <div class="name">cloud-rain</div>
+        </div>
+        
+        <div class="box" title="cloud-snow">
+            <icon name="cloud-snow"></icon>
+            <div class="name">cloud-snow</div>
+        </div>
+        
+        <div class="box" title="cloud">
+            <icon name="cloud"></icon>
+            <div class="name">cloud</div>
+        </div>
+        
+        <div class="box" title="code">
+            <icon name="code"></icon>
+            <div class="name">code</div>
+        </div>
+        
+        <div class="box" title="codepen">
+            <icon name="codepen"></icon>
+            <div class="name">codepen</div>
+        </div>
+        
+        <div class="box" title="command">
+            <icon name="command"></icon>
+            <div class="name">command</div>
+        </div>
+        
+        <div class="box" title="compass">
+            <icon name="compass"></icon>
+            <div class="name">compass</div>
+        </div>
+        
+        <div class="box" title="copy">
+            <icon name="copy"></icon>
+            <div class="name">copy</div>
+        </div>
+        
+        <div class="box" title="corner-down-left">
+            <icon name="corner-down-left"></icon>
+            <div class="name">corner-down-left</div>
+        </div>
+        
+        <div class="box" title="corner-down-right">
+            <icon name="corner-down-right"></icon>
+            <div class="name">corner-down-right</div>
+        </div>
+        
+        <div class="box" title="corner-left-down">
+            <icon name="corner-left-down"></icon>
+            <div class="name">corner-left-down</div>
+        </div>
+        
+        <div class="box" title="corner-left-up">
+            <icon name="corner-left-up"></icon>
+            <div class="name">corner-left-up</div>
+        </div>
+        
+        <div class="box" title="corner-right-down">
+            <icon name="corner-right-down"></icon>
+            <div class="name">corner-right-down</div>
+        </div>
+        
+        <div class="box" title="corner-right-up">
+            <icon name="corner-right-up"></icon>
+            <div class="name">corner-right-up</div>
+        </div>
+        
+        <div class="box" title="corner-up-left">
+            <icon name="corner-up-left"></icon>
+            <div class="name">corner-up-left</div>
+        </div>
+        
+        <div class="box" title="corner-up-right">
+            <icon name="corner-up-right"></icon>
+            <div class="name">corner-up-right</div>
+        </div>
+        
+        <div class="box" title="cpu">
+            <icon name="cpu"></icon>
+            <div class="name">cpu</div>
+        </div>
+        
+        <div class="box" title="credit-card">
+            <icon name="credit-card"></icon>
+            <div class="name">credit-card</div>
+        </div>
+        
+        <div class="box" title="crop">
+            <icon name="crop"></icon>
+            <div class="name">crop</div>
+        </div>
+        
+        <div class="box" title="crosshair">
+            <icon name="crosshair"></icon>
+            <div class="name">crosshair</div>
+        </div>
+        
+        <div class="box" title="database">
+            <icon name="database"></icon>
+            <div class="name">database</div>
+        </div>
+        
+        <div class="box" title="delete">
+            <icon name="delete"></icon>
+            <div class="name">delete</div>
+        </div>
+        
+        <div class="box" title="disc">
+            <icon name="disc"></icon>
+            <div class="name">disc</div>
+        </div>
+        
+        <div class="box" title="dollar-sign">
+            <icon name="dollar-sign"></icon>
+            <div class="name">dollar-sign</div>
+        </div>
+        
+        <div class="box" title="download-cloud">
+            <icon name="download-cloud"></icon>
+            <div class="name">download-cloud</div>
+        </div>
+        
+        <div class="box" title="download">
+            <icon name="download"></icon>
+            <div class="name">download</div>
+        </div>
+        
+        <div class="box" title="droplet">
+            <icon name="droplet"></icon>
+            <div class="name">droplet</div>
+        </div>
+        
+        <div class="box" title="edit-2">
+            <icon name="edit-2"></icon>
+            <div class="name">edit-2</div>
+        </div>
+        
+        <div class="box" title="edit-3">
+            <icon name="edit-3"></icon>
+            <div class="name">edit-3</div>
+        </div>
+        
+        <div class="box" title="edit">
+            <icon name="edit"></icon>
+            <div class="name">edit</div>
+        </div>
+        
+        <div class="box" title="external-link">
+            <icon name="external-link"></icon>
+            <div class="name">external-link</div>
+        </div>
+        
+        <div class="box" title="eye-off">
+            <icon name="eye-off"></icon>
+            <div class="name">eye-off</div>
+        </div>
+        
+        <div class="box" title="eye">
+            <icon name="eye"></icon>
+            <div class="name">eye</div>
+        </div>
+        
+        <div class="box" title="facebook">
+            <icon name="facebook"></icon>
+            <div class="name">facebook</div>
+        </div>
+        
+        <div class="box" title="fast-forward">
+            <icon name="fast-forward"></icon>
+            <div class="name">fast-forward</div>
+        </div>
+        
+        <div class="box" title="feather">
+            <icon name="feather"></icon>
+            <div class="name">feather</div>
+        </div>
+        
+        <div class="box" title="file-minus">
+            <icon name="file-minus"></icon>
+            <div class="name">file-minus</div>
+        </div>
+        
+        <div class="box" title="file-plus">
+            <icon name="file-plus"></icon>
+            <div class="name">file-plus</div>
+        </div>
+        
+        <div class="box" title="file-text">
+            <icon name="file-text"></icon>
+            <div class="name">file-text</div>
+        </div>
+        
+        <div class="box" title="file">
+            <icon name="file"></icon>
+            <div class="name">file</div>
+        </div>
+        
+        <div class="box" title="film">
+            <icon name="film"></icon>
+            <div class="name">film</div>
+        </div>
+        
+        <div class="box" title="filter">
+            <icon name="filter"></icon>
+            <div class="name">filter</div>
+        </div>
+        
+        <div class="box" title="flag">
+            <icon name="flag"></icon>
+            <div class="name">flag</div>
+        </div>
+        
+        <div class="box" title="folder-minus">
+            <icon name="folder-minus"></icon>
+            <div class="name">folder-minus</div>
+        </div>
+        
+        <div class="box" title="folder-plus">
+            <icon name="folder-plus"></icon>
+            <div class="name">folder-plus</div>
+        </div>
+        
+        <div class="box" title="folder">
+            <icon name="folder"></icon>
+            <div class="name">folder</div>
+        </div>
+        
+        <div class="box" title="git-branch">
+            <icon name="git-branch"></icon>
+            <div class="name">git-branch</div>
+        </div>
+        
+        <div class="box" title="git-commit">
+            <icon name="git-commit"></icon>
+            <div class="name">git-commit</div>
+        </div>
+        
+        <div class="box" title="git-merge">
+            <icon name="git-merge"></icon>
+            <div class="name">git-merge</div>
+        </div>
+        
+        <div class="box" title="git-pull-request">
+            <icon name="git-pull-request"></icon>
+            <div class="name">git-pull-request</div>
+        </div>
+        
+        <div class="box" title="github">
+            <icon name="github"></icon>
+            <div class="name">github</div>
+        </div>
+        
+        <div class="box" title="gitlab">
+            <icon name="gitlab"></icon>
+            <div class="name">gitlab</div>
+        </div>
+        
+        <div class="box" title="globe">
+            <icon name="globe"></icon>
+            <div class="name">globe</div>
+        </div>
+        
+        <div class="box" title="grid">
+            <icon name="grid"></icon>
+            <div class="name">grid</div>
+        </div>
+        
+        <div class="box" title="hard-drive">
+            <icon name="hard-drive"></icon>
+            <div class="name">hard-drive</div>
+        </div>
+        
+        <div class="box" title="hash">
+            <icon name="hash"></icon>
+            <div class="name">hash</div>
+        </div>
+        
+        <div class="box" title="headphones">
+            <icon name="headphones"></icon>
+            <div class="name">headphones</div>
+        </div>
+        
+        <div class="box" title="heart">
+            <icon name="heart"></icon>
+            <div class="name">heart</div>
+        </div>
+        
+        <div class="box" title="help-circle">
+            <icon name="help-circle"></icon>
+            <div class="name">help-circle</div>
+        </div>
+        
+        <div class="box" title="home">
+            <icon name="home"></icon>
+            <div class="name">home</div>
+        </div>
+        
+        <div class="box" title="image">
+            <icon name="image"></icon>
+            <div class="name">image</div>
+        </div>
+        
+        <div class="box" title="inbox">
+            <icon name="inbox"></icon>
+            <div class="name">inbox</div>
+        </div>
+        
+        <div class="box" title="info">
+            <icon name="info"></icon>
+            <div class="name">info</div>
+        </div>
+        
+        <div class="box" title="instagram">
+            <icon name="instagram"></icon>
+            <div class="name">instagram</div>
+        </div>
+        
+        <div class="box" title="italic">
+            <icon name="italic"></icon>
+            <div class="name">italic</div>
+        </div>
+        
+        <div class="box" title="layers">
+            <icon name="layers"></icon>
+            <div class="name">layers</div>
+        </div>
+        
+        <div class="box" title="layout">
+            <icon name="layout"></icon>
+            <div class="name">layout</div>
+        </div>
+        
+        <div class="box" title="life-buoy">
+            <icon name="life-buoy"></icon>
+            <div class="name">life-buoy</div>
+        </div>
+        
+        <div class="box" title="link-2">
+            <icon name="link-2"></icon>
+            <div class="name">link-2</div>
+        </div>
+        
+        <div class="box" title="link">
+            <icon name="link"></icon>
+            <div class="name">link</div>
+        </div>
+        
+        <div class="box" title="linkedin">
+            <icon name="linkedin"></icon>
+            <div class="name">linkedin</div>
+        </div>
+        
+        <div class="box" title="list">
+            <icon name="list"></icon>
+            <div class="name">list</div>
+        </div>
+        
+        <div class="box" title="loader">
+            <icon name="loader"></icon>
+            <div class="name">loader</div>
+        </div>
+        
+        <div class="box" title="lock">
+            <icon name="lock"></icon>
+            <div class="name">lock</div>
+        </div>
+        
+        <div class="box" title="log-in">
+            <icon name="log-in"></icon>
+            <div class="name">log-in</div>
+        </div>
+        
+        <div class="box" title="log-out">
+            <icon name="log-out"></icon>
+            <div class="name">log-out</div>
+        </div>
+        
+        <div class="box" title="mail">
+            <icon name="mail"></icon>
+            <div class="name">mail</div>
+        </div>
+        
+        <div class="box" title="map-pin">
+            <icon name="map-pin"></icon>
+            <div class="name">map-pin</div>
+        </div>
+        
+        <div class="box" title="map">
+            <icon name="map"></icon>
+            <div class="name">map</div>
+        </div>
+        
+        <div class="box" title="maximize-2">
+            <icon name="maximize-2"></icon>
+            <div class="name">maximize-2</div>
+        </div>
+        
+        <div class="box" title="maximize">
+            <icon name="maximize"></icon>
+            <div class="name">maximize</div>
+        </div>
+        
+        <div class="box" title="menu">
+            <icon name="menu"></icon>
+            <div class="name">menu</div>
+        </div>
+        
+        <div class="box" title="message-circle">
+            <icon name="message-circle"></icon>
+            <div class="name">message-circle</div>
+        </div>
+        
+        <div class="box" title="message-square">
+            <icon name="message-square"></icon>
+            <div class="name">message-square</div>
+        </div>
+        
+        <div class="box" title="mic-off">
+            <icon name="mic-off"></icon>
+            <div class="name">mic-off</div>
+        </div>
+        
+        <div class="box" title="mic">
+            <icon name="mic"></icon>
+            <div class="name">mic</div>
+        </div>
+        
+        <div class="box" title="minimize-2">
+            <icon name="minimize-2"></icon>
+            <div class="name">minimize-2</div>
+        </div>
+        
+        <div class="box" title="minimize">
+            <icon name="minimize"></icon>
+            <div class="name">minimize</div>
+        </div>
+        
+        <div class="box" title="minus-circle">
+            <icon name="minus-circle"></icon>
+            <div class="name">minus-circle</div>
+        </div>
+        
+        <div class="box" title="minus-square">
+            <icon name="minus-square"></icon>
+            <div class="name">minus-square</div>
+        </div>
+        
+        <div class="box" title="minus">
+            <icon name="minus"></icon>
+            <div class="name">minus</div>
+        </div>
+        
+        <div class="box" title="monitor">
+            <icon name="monitor"></icon>
+            <div class="name">monitor</div>
+        </div>
+        
+        <div class="box" title="moon">
+            <icon name="moon"></icon>
+            <div class="name">moon</div>
+        </div>
+        
+        <div class="box" title="more-horizontal">
+            <icon name="more-horizontal"></icon>
+            <div class="name">more-horizontal</div>
+        </div>
+        
+        <div class="box" title="more-vertical">
+            <icon name="more-vertical"></icon>
+            <div class="name">more-vertical</div>
+        </div>
+        
+        <div class="box" title="move">
+            <icon name="move"></icon>
+            <div class="name">move</div>
+        </div>
+        
+        <div class="box" title="music">
+            <icon name="music"></icon>
+            <div class="name">music</div>
+        </div>
+        
+        <div class="box" title="navigation-2">
+            <icon name="navigation-2"></icon>
+            <div class="name">navigation-2</div>
+        </div>
+        
+        <div class="box" title="navigation">
+            <icon name="navigation"></icon>
+            <div class="name">navigation</div>
+        </div>
+        
+        <div class="box" title="octagon">
+            <icon name="octagon"></icon>
+            <div class="name">octagon</div>
+        </div>
+        
+        <div class="box" title="package">
+            <icon name="package"></icon>
+            <div class="name">package</div>
+        </div>
+        
+        <div class="box" title="paperclip">
+            <icon name="paperclip"></icon>
+            <div class="name">paperclip</div>
+        </div>
+        
+        <div class="box" title="pause-circle">
+            <icon name="pause-circle"></icon>
+            <div class="name">pause-circle</div>
+        </div>
+        
+        <div class="box" title="pause">
+            <icon name="pause"></icon>
+            <div class="name">pause</div>
+        </div>
+        
+        <div class="box" title="percent">
+            <icon name="percent"></icon>
+            <div class="name">percent</div>
+        </div>
+        
+        <div class="box" title="phone-call">
+            <icon name="phone-call"></icon>
+            <div class="name">phone-call</div>
+        </div>
+        
+        <div class="box" title="phone-forwarded">
+            <icon name="phone-forwarded"></icon>
+            <div class="name">phone-forwarded</div>
+        </div>
+        
+        <div class="box" title="phone-incoming">
+            <icon name="phone-incoming"></icon>
+            <div class="name">phone-incoming</div>
+        </div>
+        
+        <div class="box" title="phone-missed">
+            <icon name="phone-missed"></icon>
+            <div class="name">phone-missed</div>
+        </div>
+        
+        <div class="box" title="phone-off">
+            <icon name="phone-off"></icon>
+            <div class="name">phone-off</div>
+        </div>
+        
+        <div class="box" title="phone-outgoing">
+            <icon name="phone-outgoing"></icon>
+            <div class="name">phone-outgoing</div>
+        </div>
+        
+        <div class="box" title="phone">
+            <icon name="phone"></icon>
+            <div class="name">phone</div>
+        </div>
+        
+        <div class="box" title="pie-chart">
+            <icon name="pie-chart"></icon>
+            <div class="name">pie-chart</div>
+        </div>
+        
+        <div class="box" title="play-circle">
+            <icon name="play-circle"></icon>
+            <div class="name">play-circle</div>
+        </div>
+        
+        <div class="box" title="play">
+            <icon name="play"></icon>
+            <div class="name">play</div>
+        </div>
+        
+        <div class="box" title="plus-circle">
+            <icon name="plus-circle"></icon>
+            <div class="name">plus-circle</div>
+        </div>
+        
+        <div class="box" title="plus-square">
+            <icon name="plus-square"></icon>
+            <div class="name">plus-square</div>
+        </div>
+        
+        <div class="box" title="plus">
+            <icon name="plus"></icon>
+            <div class="name">plus</div>
+        </div>
+        
+        <div class="box" title="pocket">
+            <icon name="pocket"></icon>
+            <div class="name">pocket</div>
+        </div>
+        
+        <div class="box" title="power">
+            <icon name="power"></icon>
+            <div class="name">power</div>
+        </div>
+        
+        <div class="box" title="printer">
+            <icon name="printer"></icon>
+            <div class="name">printer</div>
+        </div>
+        
+        <div class="box" title="radio">
+            <icon name="radio"></icon>
+            <div class="name">radio</div>
+        </div>
+        
+        <div class="box" title="refresh-ccw">
+            <icon name="refresh-ccw"></icon>
+            <div class="name">refresh-ccw</div>
+        </div>
+        
+        <div class="box" title="refresh-cw">
+            <icon name="refresh-cw"></icon>
+            <div class="name">refresh-cw</div>
+        </div>
+        
+        <div class="box" title="repeat">
+            <icon name="repeat"></icon>
+            <div class="name">repeat</div>
+        </div>
+        
+        <div class="box" title="rewind">
+            <icon name="rewind"></icon>
+            <div class="name">rewind</div>
+        </div>
+        
+        <div class="box" title="rotate-ccw">
+            <icon name="rotate-ccw"></icon>
+            <div class="name">rotate-ccw</div>
+        </div>
+        
+        <div class="box" title="rotate-cw">
+            <icon name="rotate-cw"></icon>
+            <div class="name">rotate-cw</div>
+        </div>
+        
+        <div class="box" title="rss">
+            <icon name="rss"></icon>
+            <div class="name">rss</div>
+        </div>
+        
+        <div class="box" title="save">
+            <icon name="save"></icon>
+            <div class="name">save</div>
+        </div>
+        
+        <div class="box" title="scissors">
+            <icon name="scissors"></icon>
+            <div class="name">scissors</div>
+        </div>
+        
+        <div class="box" title="search">
+            <icon name="search"></icon>
+            <div class="name">search</div>
+        </div>
+        
+        <div class="box" title="send">
+            <icon name="send"></icon>
+            <div class="name">send</div>
+        </div>
+        
+        <div class="box" title="server">
+            <icon name="server"></icon>
+            <div class="name">server</div>
+        </div>
+        
+        <div class="box" title="settings">
+            <icon name="settings"></icon>
+            <div class="name">settings</div>
+        </div>
+        
+        <div class="box" title="share-2">
+            <icon name="share-2"></icon>
+            <div class="name">share-2</div>
+        </div>
+        
+        <div class="box" title="share">
+            <icon name="share"></icon>
+            <div class="name">share</div>
+        </div>
+        
+        <div class="box" title="shield-off">
+            <icon name="shield-off"></icon>
+            <div class="name">shield-off</div>
+        </div>
+        
+        <div class="box" title="shield">
+            <icon name="shield"></icon>
+            <div class="name">shield</div>
+        </div>
+        
+        <div class="box" title="shopping-bag">
+            <icon name="shopping-bag"></icon>
+            <div class="name">shopping-bag</div>
+        </div>
+        
+        <div class="box" title="shopping-cart">
+            <icon name="shopping-cart"></icon>
+            <div class="name">shopping-cart</div>
+        </div>
+        
+        <div class="box" title="shuffle">
+            <icon name="shuffle"></icon>
+            <div class="name">shuffle</div>
+        </div>
+        
+        <div class="box" title="sidebar">
+            <icon name="sidebar"></icon>
+            <div class="name">sidebar</div>
+        </div>
+        
+        <div class="box" title="skip-back">
+            <icon name="skip-back"></icon>
+            <div class="name">skip-back</div>
+        </div>
+        
+        <div class="box" title="skip-forward">
+            <icon name="skip-forward"></icon>
+            <div class="name">skip-forward</div>
+        </div>
+        
+        <div class="box" title="slack">
+            <icon name="slack"></icon>
+            <div class="name">slack</div>
+        </div>
+        
+        <div class="box" title="slash">
+            <icon name="slash"></icon>
+            <div class="name">slash</div>
+        </div>
+        
+        <div class="box" title="sliders">
+            <icon name="sliders"></icon>
+            <div class="name">sliders</div>
+        </div>
+        
+        <div class="box" title="smartphone">
+            <icon name="smartphone"></icon>
+            <div class="name">smartphone</div>
+        </div>
+        
+        <div class="box" title="speaker">
+            <icon name="speaker"></icon>
+            <div class="name">speaker</div>
+        </div>
+        
+        <div class="box" title="square">
+            <icon name="square"></icon>
+            <div class="name">square</div>
+        </div>
+        
+        <div class="box" title="star">
+            <icon name="star"></icon>
+            <div class="name">star</div>
+        </div>
+        
+        <div class="box" title="stop-circle">
+            <icon name="stop-circle"></icon>
+            <div class="name">stop-circle</div>
+        </div>
+        
+        <div class="box" title="sun">
+            <icon name="sun"></icon>
+            <div class="name">sun</div>
+        </div>
+        
+        <div class="box" title="sunrise">
+            <icon name="sunrise"></icon>
+            <div class="name">sunrise</div>
+        </div>
+        
+        <div class="box" title="sunset">
+            <icon name="sunset"></icon>
+            <div class="name">sunset</div>
+        </div>
+        
+        <div class="box" title="tablet">
+            <icon name="tablet"></icon>
+            <div class="name">tablet</div>
+        </div>
+        
+        <div class="box" title="tag">
+            <icon name="tag"></icon>
+            <div class="name">tag</div>
+        </div>
+        
+        <div class="box" title="target">
+            <icon name="target"></icon>
+            <div class="name">target</div>
+        </div>
+        
+        <div class="box" title="terminal">
+            <icon name="terminal"></icon>
+            <div class="name">terminal</div>
+        </div>
+        
+        <div class="box" title="thermometer">
+            <icon name="thermometer"></icon>
+            <div class="name">thermometer</div>
+        </div>
+        
+        <div class="box" title="thumbs-down">
+            <icon name="thumbs-down"></icon>
+            <div class="name">thumbs-down</div>
+        </div>
+        
+        <div class="box" title="thumbs-up">
+            <icon name="thumbs-up"></icon>
+            <div class="name">thumbs-up</div>
+        </div>
+        
+        <div class="box" title="toggle-left">
+            <icon name="toggle-left"></icon>
+            <div class="name">toggle-left</div>
+        </div>
+        
+        <div class="box" title="toggle-right">
+            <icon name="toggle-right"></icon>
+            <div class="name">toggle-right</div>
+        </div>
+        
+        <div class="box" title="trash-2">
+            <icon name="trash-2"></icon>
+            <div class="name">trash-2</div>
+        </div>
+        
+        <div class="box" title="trash">
+            <icon name="trash"></icon>
+            <div class="name">trash</div>
+        </div>
+        
+        <div class="box" title="trending-down">
+            <icon name="trending-down"></icon>
+            <div class="name">trending-down</div>
+        </div>
+        
+        <div class="box" title="trending-up">
+            <icon name="trending-up"></icon>
+            <div class="name">trending-up</div>
+        </div>
+        
+        <div class="box" title="triangle">
+            <icon name="triangle"></icon>
+            <div class="name">triangle</div>
+        </div>
+        
+        <div class="box" title="truck">
+            <icon name="truck"></icon>
+            <div class="name">truck</div>
+        </div>
+        
+        <div class="box" title="tv">
+            <icon name="tv"></icon>
+            <div class="name">tv</div>
+        </div>
+        
+        <div class="box" title="twitter">
+            <icon name="twitter"></icon>
+            <div class="name">twitter</div>
+        </div>
+        
+        <div class="box" title="type">
+            <icon name="type"></icon>
+            <div class="name">type</div>
+        </div>
+        
+        <div class="box" title="umbrella">
+            <icon name="umbrella"></icon>
+            <div class="name">umbrella</div>
+        </div>
+        
+        <div class="box" title="underline">
+            <icon name="underline"></icon>
+            <div class="name">underline</div>
+        </div>
+        
+        <div class="box" title="unlock">
+            <icon name="unlock"></icon>
+            <div class="name">unlock</div>
+        </div>
+        
+        <div class="box" title="upload-cloud">
+            <icon name="upload-cloud"></icon>
+            <div class="name">upload-cloud</div>
+        </div>
+        
+        <div class="box" title="upload">
+            <icon name="upload"></icon>
+            <div class="name">upload</div>
+        </div>
+        
+        <div class="box" title="user-check">
+            <icon name="user-check"></icon>
+            <div class="name">user-check</div>
+        </div>
+        
+        <div class="box" title="user-minus">
+            <icon name="user-minus"></icon>
+            <div class="name">user-minus</div>
+        </div>
+        
+        <div class="box" title="user-plus">
+            <icon name="user-plus"></icon>
+            <div class="name">user-plus</div>
+        </div>
+        
+        <div class="box" title="user-x">
+            <icon name="user-x"></icon>
+            <div class="name">user-x</div>
+        </div>
+        
+        <div class="box" title="user">
+            <icon name="user"></icon>
+            <div class="name">user</div>
+        </div>
+        
+        <div class="box" title="users">
+            <icon name="users"></icon>
+            <div class="name">users</div>
+        </div>
+        
+        <div class="box" title="video-off">
+            <icon name="video-off"></icon>
+            <div class="name">video-off</div>
+        </div>
+        
+        <div class="box" title="video">
+            <icon name="video"></icon>
+            <div class="name">video</div>
+        </div>
+        
+        <div class="box" title="voicemail">
+            <icon name="voicemail"></icon>
+            <div class="name">voicemail</div>
+        </div>
+        
+        <div class="box" title="volume-1">
+            <icon name="volume-1"></icon>
+            <div class="name">volume-1</div>
+        </div>
+        
+        <div class="box" title="volume-2">
+            <icon name="volume-2"></icon>
+            <div class="name">volume-2</div>
+        </div>
+        
+        <div class="box" title="volume-x">
+            <icon name="volume-x"></icon>
+            <div class="name">volume-x</div>
+        </div>
+        
+        <div class="box" title="volume">
+            <icon name="volume"></icon>
+            <div class="name">volume</div>
+        </div>
+        
+        <div class="box" title="watch">
+            <icon name="watch"></icon>
+            <div class="name">watch</div>
+        </div>
+        
+        <div class="box" title="wifi-off">
+            <icon name="wifi-off"></icon>
+            <div class="name">wifi-off</div>
+        </div>
+        
+        <div class="box" title="wifi">
+            <icon name="wifi"></icon>
+            <div class="name">wifi</div>
+        </div>
+        
+        <div class="box" title="wind">
+            <icon name="wind"></icon>
+            <div class="name">wind</div>
+        </div>
+        
+        <div class="box" title="x-circle">
+            <icon name="x-circle"></icon>
+            <div class="name">x-circle</div>
+        </div>
+        
+        <div class="box" title="x-square">
+            <icon name="x-square"></icon>
+            <div class="name">x-square</div>
+        </div>
+        
+        <div class="box" title="x">
+            <icon name="x"></icon>
+            <div class="name">x</div>
+        </div>
+        
+        <div class="box" title="zap-off">
+            <icon name="zap-off"></icon>
+            <div class="name">zap-off</div>
+        </div>
+        
+        <div class="box" title="zap">
+            <icon name="zap"></icon>
+            <div class="name">zap</div>
+        </div>
+        
+        <div class="box" title="zoom-in">
+            <icon name="zoom-in"></icon>
+            <div class="name">zoom-in</div>
+        </div>
+        
+        <div class="box" title="zoom-out">
+            <icon name="zoom-out"></icon>
+            <div class="name">zoom-out</div>
+        </div>
+        
     </div>
-    <script type="text/javascript">
-        new Vue({
-            el: '.demo'
-        })
-    </script>
+</div>
+<script type="text/javascript">
+    new Vue({
+        el: '.demo',
+        methods: {
+            searchIcon: function (e) {
+                var keyword = e.target.value
+
+                var arr = Array.prototype.slice.call(document.querySelectorAll('.box'))
+
+                arr.forEach(function (el) {
+                    if (el.title.indexOf(keyword) > -1) {
+                        el.style.display = 'block'
+                    } else {
+                        el.style.display = 'none'
+                    }
+                })
+            }
+        }
+    })
+</script>
+
 
 </body>
 
