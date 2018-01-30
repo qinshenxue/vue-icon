@@ -5,7 +5,10 @@
 
 > vue2 svg icon component
 
-Vue component for Feather[https://feathericons.com/](https://feathericons.com/)
+Maybe it's the smallest vue component which contains all of Feather icons.
+
+# Icons
+[https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
 
 # Usage
 using npm
