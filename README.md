@@ -5,7 +5,7 @@
 
 > vue2 svg icon component
 
-Maybe it's the smallest vue component which contains all of Feather icons.
+Maybe it is the smallest vue component library that contains all the feather icons
 
 # Icons
 [https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
@@ -15,8 +15,6 @@ using npm
 ``` shell
 $ npm install vue-icon
 ```
-
-using global
 ```js
 import Vue from 'vue';
 import App from './app.vue';
