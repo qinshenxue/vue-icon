@@ -18,7 +18,7 @@ using global
 import Vue from 'vue';
 import App from './app.vue';
 import feather from 'vue-icon'
-Vue.use(feather, 'v-icon')
+Vue.use(feather, 'v-icon')  // specify a new component name
 new Vue({
     el: '#app',
     render: h => h(App)
@@ -50,7 +50,7 @@ using in `.vue` file
 Or using script tag
 ``` xml
 <script type="text/javascript" src="vue.js"></script>
-<script type="text/javascript" src="vue-feather.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-icon/lib/vue-feather.min.js"></script>
 <!-- component name is icon by default -->
 <icon name="close"></icon>
 ```
@@ -59,13 +59,13 @@ Or using script tag
 You should define the icon style in your project as follows.
 ``` css
 .icon{
-    fill:#666
+    color:#666
 }
 .icon:hover{
-    fill:#000
+    color:#000
 }
 .icon-close{
-	fill:red
+	color:red
 }
 ```
 
