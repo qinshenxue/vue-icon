@@ -5,30 +5,52 @@
 
 > vue2 svg icon component
 
-The icons are from [iconfont.cn](http://iconfont.cn/plus/collections/detail?cid=33)
-
-
-# Demo
-[https://qinshenxue.github.io/vue-icon/](https://qinshenxue.github.io/vue-icon/)
-![](demo.png)
+Vue component for Feather[https://feathericons.com/](https://feathericons.com/)
 
 # Usage
 using npm
 ``` shell
 $ npm install vue-icon
 ```
-``` js
-const Vue = require('vue');
-const Icon = require('vue-icon');
-Vue.component('your-component-name',Icon);
+
+using global
+```js
+import Vue from 'vue';
+import App from './app.vue';
+import feather from 'vue-icon'
+Vue.use(feather, 'v-icon')
+new Vue({
+    el: '#app',
+    render: h => h(App)
+});
 ```
+
+using in `.vue` file
 ``` xml
-<your-component-name name="close"></your-component-name>
+<template>
+    <div>
+        <custom-icon name="activity"></custom-icon>
+    </div>
+</template>
+
+<script>
+    import customIcon from 'vue-icon/lib/vue-feather.es'
+    export default{
+        components: {
+            customIcon
+        }
+    }
+</script>
+<style>
+    .icon {
+        width: 24px;
+    }
+</style>
 ```
 Or using script tag
 ``` xml
 <script type="text/javascript" src="vue.js"></script>
-<script type="text/javascript" src="lib/icon.min.js"></script>
+<script type="text/javascript" src="vue-feather.min.js"></script>
 <!-- component name is icon by default -->
 <icon name="close"></icon>
 ```
@@ -52,11 +74,6 @@ You should define the icon style in your project as follows.
 | Attribute      | Description  | Type           |
 | ------------- | ------------- |:-------------:|
 | name      | The name of the SVG file | string |
-| w      | Icon's width     |  number |
-| h | Icon's height     |   number |
-
-# How to use your icon
-You can download the icon on the [iconfont.cn](http://iconfont.cn/) or design your own icon to save as SVG file. Put the SVG file in `src/svg/`, and run `npm install && npm run build`.
 
 # Changelog
 Detailed changes for each release are documented in the release notes.
