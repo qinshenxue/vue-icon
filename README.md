@@ -15,7 +15,7 @@ using npm
 ``` shell
 $ npm install vue-icon
 ```
-If you don't want to use default component name, You can specify a new component name as shown in the following example.
+If you don't want to use default component name, you can specify a new component name as shown in the following example.
 ```js
 import Vue from 'vue';
 import App from './app.vue';
@@ -26,7 +26,7 @@ new Vue({
     render: h => h(App)
 });
 ```
-or
+You can also configure an object as follows.
 ```js
 Vue.use(feather, {
     name: 'v-icon',
@@ -45,6 +45,7 @@ Vue.use(feather, {
     }
 })
 ```
+The configured objects are treated as mixins.
 
 using in `.vue` file
 ``` xml
@@ -68,16 +69,18 @@ using in `.vue` file
     }
 </style>
 ```
+
 Or using script tag
 ``` xml
 <script type="text/javascript" src="vue.js"></script>
 <script type="text/javascript" src="https://unpkg.com/vue-icon/lib/vue-feather.min.js"></script>
+
 <!-- component name is icon by default -->
 <icon name="close"></icon>
 ```
 
 ## Icon Style
-Components do not contain any style definitions, you can define styles based on `baseClass:'icon'` and `classPrefix:'icon-'`.
+Components don't contain any style definitions, you can define styles based on `baseClass:'icon'` and `classPrefix:'icon-'`.
 ``` css
 .icon{
     color:#666
@@ -90,11 +93,11 @@ Components do not contain any style definitions, you can define styles based on 
 }
 ```
 
-# Component Attributes
+# Default Component Attributes
 
 | Attribute      | Description  | Type           |
 | ------------- | ------------- |:-------------:|
-| name      | The name of the SVG file | string |
+| name      | The name of icon | string |
 
 # Changelog
 Detailed changes for each release are documented in the release notes.
