@@ -31,7 +31,7 @@ fs.readdir(featherDir, (err, files) => {
                                 case 'rect':
                                     result.svg.rect.forEach(function (pathItem) {
                                         let attr = pathItem.$
-                                        children.push('r', `${attr.x} ${attr.y} ${attr.width} ${attr.height}` + (attr.rx ? `${attr.rx} ${attr.ry}` : ''))
+                                        children.push('r', `${attr.x} ${attr.y} ${attr.width} ${attr.height}` + (attr.rx ? ` ${attr.rx} ${attr.ry}` : ''))
                                     })
                                     break
                                 case 'circle':
