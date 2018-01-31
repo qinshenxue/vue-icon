@@ -1,7 +1,7 @@
 {
     "name": "vue-icon",
     "version": "2.0.0",
-    "description": "vue2 svg icon component",
+    "description": "Maybe it is the smallest vue component that contains all the feather icons",
     "keywords": [
         "vue icon",
         "vue feather",
