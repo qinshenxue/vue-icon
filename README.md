@@ -58,20 +58,28 @@ using in `.vue` file
 ``` xml
 <template>
     <div>
-        <custom-icon name="activity"></custom-icon>
+        <v-icon name="eye"></v-icon>
+        <v-icon name="x"></v-icon>
+        <custom-icon name="activity" base-class="custom-icon"></custom-icon>
     </div>
 </template>
 
 <script>
-    import customIcon from 'vue-icon/lib/vue-feather.es'
+    import customIcon from 'vue-icon/lib/vue-feather.esm'
     export default{
         components: {
             customIcon
+        },
+        data: function () {
+            return {
+                baseClass: 'v-icon'
+            }
         }
     }
 </script>
 <style>
-    .icon {
+    .v-icon,
+    .custom-icon {
         width: 24px;
     }
 </style>
@@ -100,11 +108,13 @@ Components don't contain any style definitions, you can define styles based on `
 }
 ```
 
-# Default Component Attributes
+# Component Attributes
 
-| Attribute      | Description  | Type           |
-| ------------- | ------------- |:-------------:|
-| name      | The name of icon | string |
+| Attribute      | Description  | Type           | Default |
+| ------------- | ------------- |:-------------:| :-------------:|
+| name      | The name of icon | string | -- |
+| base-class      | icon base class | string | icon |
+| class-prefix      | icon class prefix | string | icon- |
 
 # Changelog
 Detailed changes for each release are documented in the release notes.

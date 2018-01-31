@@ -9,10 +9,11 @@
         "icon",
         "feather"
     ],
-    "main": "lib/vue-feather-plugin.es.js",
+    "main": "lib/vue-feather-plugin.esm.js",
     "scripts": {
         "build": "rollup -c build/rollup.config.js",
-        "dev": "webpack-dev-server --open --config examples/webpack.config.js"
+        "feather": "node build/genFeatherIcons.js",
+        "example": "webpack-dev-server --open --config examples/webpack.config.js"
     },
     "repository": {
         "type": "git",

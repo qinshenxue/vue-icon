@@ -13,14 +13,14 @@ export default [{
     plugins,
     output: {
         format: 'es',
-        file: resolve('../lib/vue-feather-plugin.es.js')
+        file: resolve('../lib/vue-feather-plugin.esm.js')
     }
 }, {
     input: resolve('../src/vue-feather.js'),
     plugins,
     output: {
         format: 'es',
-        file: resolve('../lib/vue-feather.es.js')
+        file: resolve('../lib/vue-feather.esm.js')
     }
 }, {
     input: resolve('../src/vue-feather-iife.js'),
@@ -37,6 +37,6 @@ export default [{
     plugins,
     output: {
         format: 'es',
-        file: resolve('../lib/feather-icons.es.js')
+        file: resolve('../lib/feather-icons.esm.js')
     }
 }]

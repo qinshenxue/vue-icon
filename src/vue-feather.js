@@ -4,6 +4,14 @@ export default  {
         name: {
             type: String,
             required: true
+        },
+        baseClass: {
+            type: String,
+            default: 'icon'
+        },
+        classPrefix: {
+            type: String,
+            default: 'icon-'
         }
     },
     render (h) {
@@ -87,7 +95,7 @@ export default  {
         return h(
             "svg",
             {
-                class: [this.baseClass || 'icon', (this.classPrefix || 'icon-') + this.name],
+                class: [this.baseClass, this.classPrefix + this.name],
                 attrs: {
                     viewBox: "0 0 24 24",
                     fill: "none",

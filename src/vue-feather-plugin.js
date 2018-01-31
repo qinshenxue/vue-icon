@@ -10,6 +10,14 @@ export default function install(Vue, options) {
     if (type === '[object String]') {
         Vue.component(options, feather)
     } else if (type === '[object Object]') {
+        if (options.props) {
+            if (options.props.baseClass) {
+                feather.props.baseClass = options.props.baseClass
+            }
+            if (options.props.classPrefix) {
+                feather.props.classPrefix = options.props.classPrefix
+            }
+        }
         feather.mixins = [options]
         Vue.component(options.name || 'icon', feather)
     } else {

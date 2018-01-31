@@ -1,8 +1,9 @@
 build
+examples
 .vscode
+.idea
 src
 *.log
-*.png
 index.ejs
 index.html
 .*
