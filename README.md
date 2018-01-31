@@ -15,7 +15,7 @@ using npm
 ``` shell
 $ npm install vue-icon
 ```
-If you don't want to use default component name, you can specify a new component name as shown in the following example.
+The default component name is icon, specify a new component name with `Vue.use(plugin,customName)`.
 ```js
 import Vue from 'vue';
 import App from './app.vue';
@@ -26,7 +26,7 @@ new Vue({
     render: h => h(App)
 });
 ```
-You can also configure an object as follows.
+Or configure an object to change the name and the default icon class.
 ```js
 Vue.use(feather, {
     name: 'v-icon',
@@ -39,13 +39,20 @@ Vue.use(feather, {
             type: String,
             default: 'v-icon-'
         }
-    },
-    created(){
-        console.log('created')
+    }
+})
+// or
+Vue.use(feather, {
+    name: 'v-icon',
+    data(){
+        return {
+            baseClass: 'v-icon',
+            classPrefix: 'v-icon-'
+        }
     }
 })
 ```
-The configured objects are treated as mixins.
+The configured objects are treated as [mixins](https://vuejs.org/v2/api/index.html#mixins), so you can define it like normal Vue instance objects.
 
 using in `.vue` file
 ``` xml
