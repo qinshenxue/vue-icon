@@ -77,7 +77,8 @@ Or using script tag
 ```
 
 ## Icon Style
-You should define the icon style in your project as follows.
+Components do not contain any style definitions, you can define styles based on `baseClass` and `classPrefix` baseClass.
+`baseClass:'icon'` & `classPrefix:'icon-'`
 ``` css
 .icon{
     color:#666
