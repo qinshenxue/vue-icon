@@ -77,8 +77,7 @@ Or using script tag
 ```
 
 ## Icon Style
-Components do not contain any style definitions, you can define styles based on `baseClass` and `classPrefix` baseClass.
-`baseClass:'icon'` & `classPrefix:'icon-'`
+Components do not contain any style definitions, you can define styles based on `baseClass:'icon'` and `classPrefix:'icon-'`.
 ``` css
 .icon{
     color:#666
