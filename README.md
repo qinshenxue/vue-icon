@@ -15,7 +15,7 @@ using npm
 ``` shell
 $ npm install vue-icon
 ```
-The default component name is icon, specify a new component name with `Vue.use(plugin,customName)`.
+The default component name is icon, you can specify a new component name with `Vue.use(plugin,customName)`.
 ```js
 import Vue from 'vue';
 import App from './app.vue';
