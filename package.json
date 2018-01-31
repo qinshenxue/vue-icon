@@ -10,6 +10,9 @@
         "feather"
     ],
     "main": "lib/vue-feather-plugin.esm.js",
+    "files": [
+        "lib"
+    ],
     "scripts": {
         "build": "rollup -c build/rollup.config.js",
         "feather": "node build/genFeatherIcons.js",

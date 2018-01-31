@@ -1,9 +1,0 @@
-build
-examples
-.vscode
-.idea
-src
-*.log
-index.ejs
-index.html
-.*
