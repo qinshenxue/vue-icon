@@ -4,14 +4,6 @@ export default  {
         name: {
             type: String,
             required: true
-        },
-        baseClass: {
-            type: String,
-            default: 'icon'
-        },
-        classPrefix: {
-            type: String,
-            default: 'icon-'
         }
     },
     render (h) {
@@ -32,9 +24,9 @@ export default  {
         if (icon) {
             for (let i = 0, j = icon.length; i < j; i += 2) {
 
-                var attrs = {}
-                var shortName = icon[i]
-                var attrVal = icon[i + 1]
+                let attrs = {}
+                let shortName = icon[i]
+                let attrVal = icon[i + 1]
                 if (['r', 'c', 'e', 'l'].indexOf(shortName) > -1) {
                     attrVal = attrVal.split(' ')
                 }
@@ -86,7 +78,7 @@ export default  {
 
                 elms.push(
                     h(shapeNameMap[icon[i]], {
-                        attrs: attrs
+                        attrs
                     })
                 );
             }
@@ -95,7 +87,7 @@ export default  {
         return h(
             "svg",
             {
-                class: [this.baseClass, this.classPrefix + this.name],
+                class: [this.baseClass || 'icon', (this.classPrefix || 'icon-') + this.name],
                 attrs: {
                     viewBox: "0 0 24 24",
                     fill: "none",

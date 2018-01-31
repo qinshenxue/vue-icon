@@ -15,15 +15,35 @@ using npm
 ``` shell
 $ npm install vue-icon
 ```
+If you don't want to use default component name, You can specify a new component name as shown in the following example.
 ```js
 import Vue from 'vue';
 import App from './app.vue';
 import feather from 'vue-icon'
-Vue.use(feather, 'v-icon')  // specify a new component name
+Vue.use(feather, 'v-icon')
 new Vue({
     el: '#app',
     render: h => h(App)
 });
+```
+or
+```js
+Vue.use(feather, {
+    name: 'v-icon',
+    props: {
+        baseClass: {
+            type: String,
+            default: 'v-icon'
+        },
+        classPrefix: {
+            type: String,
+            default: 'v-icon-'
+        }
+    },
+    created(){
+        console.log('created')
+    }
+})
 ```
 
 using in `.vue` file
