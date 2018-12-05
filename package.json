@@ -1,6 +1,6 @@
 {
     "name": "vue-icon",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Maybe it is the smallest vue component that contains all the feather icons",
     "keywords": [
         "vue icon",
@@ -14,8 +14,8 @@
         "lib"
     ],
     "scripts": {
+        "prebuild": "node build/genFeatherIcons.js",
         "build": "rollup -c build/rollup.config.js",
-        "feather": "node build/genFeatherIcons.js",
         "example": "webpack-dev-server --open --config examples/webpack.config.js"
     },
     "repository": {
@@ -34,7 +34,7 @@
         "babel-preset-env": "^1.6.1",
         "css-loader": "^0.28.9",
         "ejs": "^2.5.7",
-        "feather-icons": "^4.5.0",
+        "feather-icons": "^4.9.0",
         "html-webpack-plugin": "^2.30.1",
         "rollup": "^0.55.1",
         "rollup-plugin-babel": "^3.0.3",

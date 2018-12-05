@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import customIcon from 'vue-icon/lib/vue-feather.esm'
+    import customIcon from '../lib/vue-feather.esm'
     export default{
         components: {
             customIcon

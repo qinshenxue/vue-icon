@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './app.vue';
-import feather from 'vue-icon'
+import feather from '../lib/vue-feather-plugin.esm'
 Vue.use(feather, {
     name: 'v-icon',
     props: {
