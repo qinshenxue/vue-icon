@@ -12,6 +12,18 @@ export default  {
         classPrefix: {
             type: String,
             default: 'icon-'
+        },
+        stroke: {
+            type: String,
+            default: 'currentColor'
+        },
+        strokeWidth: {
+            type: Number,
+            default: 2
+        },
+        fill: {
+            type: String,
+            default: "none"
         }
     },
     render (h) {
@@ -98,9 +110,9 @@ export default  {
                 class: [this.baseClass, this.classPrefix + this.name],
                 attrs: {
                     viewBox: "0 0 24 24",
-                    fill: "none",
-                    stroke: "currentColor",
-                    "stroke-width": "2",
+                    fill: this.fill,
+                    stroke: this.stroke,
+                    "stroke-width": `${this.strokeWidth}`,
                     "stroke-linecap": "round",
                     "stroke-linejoin": "round"
                 }
