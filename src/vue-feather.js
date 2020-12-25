@@ -1,3 +1,5 @@
+import { h } from 'vue'
+
 import icons from './feather-icons'
 export default  {
     props: {
@@ -14,7 +16,7 @@ export default  {
             default: 'icon-'
         }
     },
-    render (h) {
+    render () {
         const elms = [];
 
         const icon = icons[this.name]
