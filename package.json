@@ -34,7 +34,7 @@
         "babel-preset-env": "^1.6.1",
         "css-loader": "^0.28.9",
         "ejs": "^2.5.7",
-        "feather-icons": "^4.9.0",
+        "feather-icons": "^4.26.0",
         "html-webpack-plugin": "^2.30.1",
         "rollup": "^0.55.1",
         "rollup-plugin-babel": "^3.0.3",
