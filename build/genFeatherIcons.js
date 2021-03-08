@@ -10,7 +10,7 @@ const queue = []
 const featherIcons = {}
 fs.readdir(featherDir, (err, files) => {
 
-    files.forEach(fileName => {
+    files.sort().forEach(fileName => {
 
         queue.push(new Promise(function (resolve, reject) {
             fs.readFile(path.resolve(featherDir, fileName), function (err, data) {
@@ -80,7 +80,7 @@ fs.readdir(featherDir, (err, files) => {
             }
         });
 
-        ejs.renderFile(path.resolve(__dirname, '../index.ejs'), {icons: Object.keys(featherIcons)}, function (err, str) {
+        ejs.renderFile(path.resolve(__dirname, '../index.ejs'), {icons: featherIcons}, function (err, str) {
             fs.writeFile(path.resolve(__dirname, '../index.html'), str, function (err) {
                 console.log('index.html finished')
             });
